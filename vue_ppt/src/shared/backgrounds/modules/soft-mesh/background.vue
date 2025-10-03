@@ -24,11 +24,12 @@
 
 .mesh-gradient {
   background-image:
-    radial-gradient(1000px 520px at 12% 18%, rgba(99, 102, 241, 0.35), transparent 60%),
-    radial-gradient(820px 480px at 82% 28%, rgba(236, 72, 153, 0.30), transparent 60%),
-    radial-gradient(900px 560px at 56% 82%, rgba(20, 184, 166, 0.28), transparent 60%),
-    linear-gradient(180deg, #ffffff, #f4f7ff);
-  filter: saturate(1.12) contrast(1.04);
+    radial-gradient(900px 520px at 15% 22%, rgba(66, 133, 244, 0.5), transparent 60%),
+    radial-gradient(820px 480px at 82% 28%, rgba(234, 67, 53, 0.46), transparent 60%),
+    radial-gradient(760px 520px at 32% 82%, rgba(250, 187, 5, 0.44), transparent 65%),
+    radial-gradient(780px 520px at 75% 78%, rgba(52, 168, 82, 0.46), transparent 60%),
+    linear-gradient(180deg, #ffffff, #f7f9ff 45%, rgba(247, 249, 255, 0.65));
+  filter: saturate(1.05) contrast(1.02);
 }
 
 .glass-veil {

@@ -52,6 +52,12 @@ const categories = ref<Category[]>([
         title: '设计语言模板',
         description: '基于设计语言的多版式中文模板（含动效/互动）',
         route: '/design-language-template'
+      },
+      {
+        id: 'internship',
+        title: "Kurt Yang's Google Internship",
+        description: 'Summer 2024 SWE internship highlights',
+        route: '/internship'
       }
     ]
   }
