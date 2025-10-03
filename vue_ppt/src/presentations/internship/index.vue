@@ -27,6 +27,7 @@ import Slide12Demo from './slide-12-demo.vue'
 import Slide13Multihost from './slide-13-multihost.vue'
 import Slide14Performance from './slide-14-performance.vue'
 import Slide15BenchmarkUsage from './slide-15-benchmark-usage.vue'
+import portraitLogo from './unnamed.png'
 import deckLocale from './locales/en.json'
 
 type LocaleConfig = Record<LocaleCode, Pick<LocaleMeta, 'label' | 'nativeLabel' | 'direction'>>
@@ -88,6 +89,8 @@ const slides = [
   Slide14Performance,
   Slide15BenchmarkUsage
 ]
+
+const portraitSrc = portraitLogo
 </script>
 
 <template>
@@ -99,6 +102,12 @@ const slides = [
           :slides="slides"
           :title="presentation.title"
           :thumbnails-label="t('labels.thumbnails')"
+        />
+        <img
+          v-if="presentationContext.state.activeIndex !== 0"
+          :src="portraitSrc"
+          alt="Presenter portrait"
+          class="corner-portrait"
         />
       </div>
     </main>
@@ -132,6 +141,10 @@ const slides = [
 
 .deck-shell :deep(.thumbnails) {
   @apply fixed right-5 top-1/2 flex max-h-[80vh] w-72 -translate-y-1/2 flex-col overflow-hidden rounded-xl bg-slate-900/90 shadow-2xl shadow-slate-900/40 backdrop-blur-xl;
+}
+
+.corner-portrait {
+  @apply pointer-events-none absolute bottom-6 right-6 h-8 w-auto drop-shadow-xl;
 }
 
 .deck-shell :deep(.thumbnails-header) {

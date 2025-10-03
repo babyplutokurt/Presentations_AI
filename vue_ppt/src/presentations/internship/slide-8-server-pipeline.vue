@@ -128,10 +128,9 @@ const { t } = useDeckI18n('internship', {
 }
 
 .pipeline {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
   gap: clamp(1.4rem, 3vw, 2.2rem);
-  align-items: stretch;
 }
 
 .connector {
@@ -239,7 +238,7 @@ const { t } = useDeckI18n('internship', {
 
 @media (max-width: 1024px) {
   .pipeline {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 </style>
